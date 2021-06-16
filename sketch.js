@@ -13,7 +13,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800,800);
+  createCanvas(800,600);
 
   iss = createSprite(400, 250, 10, 10);
   iss.addImage("intSS", issImg);
@@ -77,7 +77,7 @@ function draw() {
 
     fill('white')
     textSize(40);
-    text("OOPS!! YOU CRASHED INTO THE ISS!!", 20, 700);
+    text("OOPS!! YOU CRASHED INTO THE ISS!!", 20, 500);
   }
 
   if (craft.velocityY < 0.3 && craft.isTouching(goal)) {
@@ -88,7 +88,7 @@ function draw() {
 
     fill('white');
     textSize(40);
-    text("DOCKING SUCCESFULL", 200, 700);
+    text("DOCKING SUCCESFULL", 200, 500);
 
   }else if (craft.velocityY > 0.3 && craft.isTouching(goal)) {
     vel = 1;
